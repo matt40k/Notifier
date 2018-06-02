@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notifier"
         mc:Ignorable="d"
-        WindowStyle="None" WindowState="Normal" ShowInTaskbar="False" Topmost="True" Visibility="Hidden"
+        WindowStyle="None" WindowState="Normal" ShowInTaskbar="False" Visibility="Hidden"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
@@ -21,6 +21,7 @@
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="0" Height="340" Width="400"
                        TextWrapping="Wrap" Text="" FontSize="16" FontFamily="Arial"
                        Name="messageBlock"/>
+            <Image Name="image" Width="280" Height="280" Grid.Column="0" Grid.Row="0" />
         </Grid>
 
 
