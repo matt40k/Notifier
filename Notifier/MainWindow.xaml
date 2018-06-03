@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Notifier"
         mc:Ignorable="d"
         WindowStyle="None" WindowState="Normal" ShowInTaskbar="False" Visibility="Hidden"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Notifier" Height="450" Width="800">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Grid.ColumnDefinitions>
@@ -19,11 +19,27 @@
             </Grid.RowDefinitions>
             <Button Name="okButton" Content="OK" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1" Width="75" Click="okButton_Click" />
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="0" Height="340" Width="400"
-                       TextWrapping="Wrap" Text="" FontSize="16" FontFamily="Arial"
-                       Name="messageBlock"/>
+                       TextWrapping="Wrap" Text="" FontSize="16" FontFamily="Arial" Visibility="Hidden"
+                       Name="messageView"/>
+            <TextBox HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="0" Height="340" Width="400"
+                       TextWrapping="Wrap" Text="" FontSize="16" FontFamily="Arial" Visibility="Hidden"
+                       Name="messageEdit"/>
             <Image Name="image" Width="280" Height="280" Grid.Column="0" Grid.Row="0" />
+            <ComboBox Grid.Row="1" Grid.Column="0"
+                      Width="125" 
+                      VerticalAlignment="Center" HorizontalAlignment="Center"
+                      Name="NotifierType" 
+                      SelectionChanged="NotifierType_SelectionChanged"
+                      Visibility="Hidden">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
         </Grid>
-
-
     </Grid>
 </Window>
